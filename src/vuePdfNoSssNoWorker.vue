@@ -5,8 +5,8 @@
 
 	if ( import.meta.env.VUE_ENV !== 'server' ) {
 
-		var pdfjsWrapper = require('./pdfjsWrapper.js').default;
-		var PDFJS = require('pdfjs-dist/es5/build/pdf.js');
+		var pdfjsWrapper = import('./pdfjsWrapper.js').default;
+		var PDFJS = import('pdfjs-dist/es5/build/pdf.js');
 		var component = componentFactory(pdfjsWrapper(PDFJS));
 	} else {
 
